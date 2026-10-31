@@ -1,0 +1,19 @@
+-- Daily orders and net revenue (orders_partition_replace)
+2026-01-01  orders=   37  gross=     10,516.26  net=      8,893.85
+2026-01-02  orders=   39  gross=     10,687.85  net=      8,916.11
+2026-01-03  orders=   44  gross=  1,010,899.52  net=      7,536.96
+2026-01-04  orders=   45  gross=     11,938.05  net=     10,782.08
+2026-01-05  orders=   35  gross=      8,935.07  net=      7,543.58
+
+-- Order status mix (orders_partition_replace)
+shipped    115
+paid       50
+cancelled  22
+refunded   13
+
+-- Top 5 customers by net revenue, with region (orders_partition_replace)
+cust_00018  EU  net=3,440.80
+cust_00002  EU  net=3,387.96
+cust_00015  IN  net=3,001.04
+cust_00004  US  net=2,712.44
+cust_00019  IN  net=2,691.47

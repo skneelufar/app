@@ -1,0 +1,1139 @@
+{
+  "config": {
+    "batches": 37,
+    "days": 30,
+    "orders": 20000,
+    "seed": 42
+  },
+  "dataset": {
+    "batch_files": 37,
+    "customers": 400,
+    "days": 30,
+    "labelled_rejects": 4313,
+    "orders": 20000,
+    "rows": {
+      "duplicate": 1618,
+      "invalid": 2695,
+      "valid": 53911
+    },
+    "seed": 42,
+    "valid_events": 53911
+  },
+  "generate_s": 0.5343306000577286,
+  "ingest_total_s": 3.5426656999625266,
+  "optimization": {
+    "partitions_read": 5,
+    "speedup_x": 2.7191322840494148,
+    "with_index_ms": 24.515100056305528,
+    "without_index_ms": 66.65980000980198
+  },
+  "per_batch": [
+    {
+      "batch": "orders_2026-01-01.csv",
+      "events_in_batch": 771,
+      "full_refresh": {
+        "ms": 4.050999996252358,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 714,
+        "rows_written": 585,
+        "target_rows": 585
+      },
+      "incremental_merge": {
+        "ms": 5.657800007611513,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 714,
+        "rows_written": 585,
+        "target_rows": 585
+      },
+      "partition_replace": {
+        "ms": 4.475600086152554,
+        "partitions_touched": 1,
+        "rows_deleted": 0,
+        "rows_in": 714,
+        "rows_written": 585,
+        "target_rows": 585
+      },
+      "rejected": 57
+    },
+    {
+      "batch": "orders_2026-01-02.csv",
+      "events_in_batch": 1229,
+      "full_refresh": {
+        "ms": 8.106800029054284,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1852,
+        "rows_written": 1204,
+        "target_rows": 1204
+      },
+      "incremental_merge": {
+        "ms": 9.144700015895069,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1138,
+        "rows_written": 928,
+        "target_rows": 1204
+      },
+      "partition_replace": {
+        "ms": 11.892199981957674,
+        "partitions_touched": 2,
+        "rows_deleted": 585,
+        "rows_in": 1852,
+        "rows_written": 1204,
+        "target_rows": 1204
+      },
+      "rejected": 91
+    },
+    {
+      "batch": "orders_2026-01-03.csv",
+      "events_in_batch": 1598,
+      "full_refresh": {
+        "ms": 12.166399974375963,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 3332,
+        "rows_written": 1893,
+        "target_rows": 1893
+      },
+      "incremental_merge": {
+        "ms": 13.314799987711012,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1480,
+        "rows_written": 1230,
+        "target_rows": 1893
+      },
+      "partition_replace": {
+        "ms": 24.214099976234138,
+        "partitions_touched": 3,
+        "rows_deleted": 1204,
+        "rows_in": 3332,
+        "rows_written": 1893,
+        "target_rows": 1893
+      },
+      "rejected": 118
+    },
+    {
+      "batch": "orders_2026-01-04.csv",
+      "events_in_batch": 1821,
+      "full_refresh": {
+        "ms": 22.275199997238815,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 5018,
+        "rows_written": 2564,
+        "target_rows": 2564
+      },
+      "incremental_merge": {
+        "ms": 12.144699925556779,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1686,
+        "rows_written": 1381,
+        "target_rows": 2564
+      },
+      "partition_replace": {
+        "ms": 30.097699956968427,
+        "partitions_touched": 4,
+        "rows_deleted": 1893,
+        "rows_in": 5018,
+        "rows_written": 2564,
+        "target_rows": 2564
+      },
+      "rejected": 135
+    },
+    {
+      "batch": "orders_2026-01-05.csv",
+      "events_in_batch": 1894,
+      "full_refresh": {
+        "ms": 28.625500039197505,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 6771,
+        "rows_written": 3228,
+        "target_rows": 3228
+      },
+      "incremental_merge": {
+        "ms": 13.52570008020848,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1753,
+        "rows_written": 1419,
+        "target_rows": 3228
+      },
+      "partition_replace": {
+        "ms": 54.996600025333464,
+        "partitions_touched": 5,
+        "rows_deleted": 2564,
+        "rows_in": 6771,
+        "rows_written": 3228,
+        "target_rows": 3228
+      },
+      "rejected": 141
+    },
+    {
+      "batch": "orders_2026-01-06.csv",
+      "events_in_batch": 2033,
+      "full_refresh": {
+        "ms": 62.46919999830425,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 8654,
+        "rows_written": 3949,
+        "target_rows": 3949
+      },
+      "incremental_merge": {
+        "ms": 13.160500093363225,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1883,
+        "rows_written": 1509,
+        "target_rows": 3949
+      },
+      "partition_replace": {
+        "ms": 49.19259995222092,
+        "partitions_touched": 6,
+        "rows_deleted": 3228,
+        "rows_in": 8654,
+        "rows_written": 3949,
+        "target_rows": 3949
+      },
+      "rejected": 150
+    },
+    {
+      "batch": "orders_2026-01-07.csv",
+      "events_in_batch": 1986,
+      "full_refresh": {
+        "ms": 74.05699999071658,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 10493,
+        "rows_written": 4599,
+        "target_rows": 4599
+      },
+      "incremental_merge": {
+        "ms": 16.00569998845458,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1839,
+        "rows_written": 1476,
+        "target_rows": 4599
+      },
+      "partition_replace": {
+        "ms": 62.0716999983415,
+        "partitions_touched": 7,
+        "rows_deleted": 3949,
+        "rows_in": 10493,
+        "rows_written": 4599,
+        "target_rows": 4599
+      },
+      "rejected": 147
+    },
+    {
+      "batch": "orders_2026-01-08.csv",
+      "events_in_batch": 1974,
+      "full_refresh": {
+        "ms": 55.468599894084036,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 12321,
+        "rows_written": 5287,
+        "target_rows": 5287
+      },
+      "incremental_merge": {
+        "ms": 18.0655000731349,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1828,
+        "rows_written": 1474,
+        "target_rows": 5287
+      },
+      "partition_replace": {
+        "ms": 91.06090001296252,
+        "partitions_touched": 8,
+        "rows_deleted": 4599,
+        "rows_in": 12321,
+        "rows_written": 5287,
+        "target_rows": 5287
+      },
+      "rejected": 146
+    },
+    {
+      "batch": "orders_2026-01-09.csv",
+      "events_in_batch": 1905,
+      "full_refresh": {
+        "ms": 65.68419991526753,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 14085,
+        "rows_written": 5935,
+        "target_rows": 5935
+      },
+      "incremental_merge": {
+        "ms": 12.47499999590218,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1764,
+        "rows_written": 1437,
+        "target_rows": 5935
+      },
+      "partition_replace": {
+        "ms": 93.03879993967712,
+        "partitions_touched": 8,
+        "rows_deleted": 4638,
+        "rows_in": 12321,
+        "rows_written": 5286,
+        "target_rows": 5935
+      },
+      "rejected": 141
+    },
+    {
+      "batch": "orders_2026-01-10.csv",
+      "events_in_batch": 1943,
+      "full_refresh": {
+        "ms": 94.42470001522452,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 15884,
+        "rows_written": 6600,
+        "target_rows": 6600
+      },
+      "incremental_merge": {
+        "ms": 12.957400060258806,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1799,
+        "rows_written": 1443,
+        "target_rows": 6600
+      },
+      "partition_replace": {
+        "ms": 68.66490002721548,
+        "partitions_touched": 8,
+        "rows_deleted": 4646,
+        "rows_in": 12399,
+        "rows_written": 5311,
+        "target_rows": 6600
+      },
+      "rejected": 144
+    },
+    {
+      "batch": "orders_2026-01-11.csv",
+      "events_in_batch": 1918,
+      "full_refresh": {
+        "ms": 72.79729994479567,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 17660,
+        "rows_written": 7260,
+        "target_rows": 7260
+      },
+      "incremental_merge": {
+        "ms": 12.204400030896068,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1776,
+        "rows_written": 1455,
+        "target_rows": 7260
+      },
+      "partition_replace": {
+        "ms": 95.82090005278587,
+        "partitions_touched": 8,
+        "rows_deleted": 4595,
+        "rows_in": 12249,
+        "rows_written": 5255,
+        "target_rows": 7260
+      },
+      "rejected": 142
+    },
+    {
+      "batch": "orders_2026-01-12.csv",
+      "events_in_batch": 1951,
+      "full_refresh": {
+        "ms": 105.5786000797525,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 19467,
+        "rows_written": 7935,
+        "target_rows": 7935
+      },
+      "incremental_merge": {
+        "ms": 15.753000043332577,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1807,
+        "rows_written": 1423,
+        "target_rows": 7935
+      },
+      "partition_replace": {
+        "ms": 69.96310001704842,
+        "partitions_touched": 8,
+        "rows_deleted": 4596,
+        "rows_in": 12273,
+        "rows_written": 5271,
+        "target_rows": 7935
+      },
+      "rejected": 144
+    },
+    {
+      "batch": "orders_2026-01-13.csv",
+      "events_in_batch": 1908,
+      "full_refresh": {
+        "ms": 87.57199998944998,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 21234,
+        "rows_written": 8591,
+        "target_rows": 8591
+      },
+      "incremental_merge": {
+        "ms": 12.080600019544363,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1767,
+        "rows_written": 1438,
+        "target_rows": 8591
+      },
+      "partition_replace": {
+        "ms": 82.09679997526109,
+        "partitions_touched": 7,
+        "rows_deleted": 3882,
+        "rows_in": 10289,
+        "rows_written": 4538,
+        "target_rows": 8591
+      },
+      "rejected": 141
+    },
+    {
+      "batch": "orders_2026-01-14.csv",
+      "events_in_batch": 1944,
+      "full_refresh": {
+        "ms": 123.54850000701845,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 23034,
+        "rows_written": 9276,
+        "target_rows": 9276
+      },
+      "incremental_merge": {
+        "ms": 13.513099984265864,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1800,
+        "rows_written": 1462,
+        "target_rows": 9276
+      },
+      "partition_replace": {
+        "ms": 69.11689997650683,
+        "partitions_touched": 8,
+        "rows_deleted": 4538,
+        "rows_in": 12089,
+        "rows_written": 5223,
+        "target_rows": 9276
+      },
+      "rejected": 144
+    },
+    {
+      "batch": "orders_2026-01-15.csv",
+      "events_in_batch": 1919,
+      "full_refresh": {
+        "ms": 102.09679999388754,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 24811,
+        "rows_written": 9929,
+        "target_rows": 9929
+      },
+      "incremental_merge": {
+        "ms": 12.895100051537156,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1777,
+        "rows_written": 1449,
+        "target_rows": 9929
+      },
+      "partition_replace": {
+        "ms": 92.42619993165135,
+        "partitions_touched": 8,
+        "rows_deleted": 4569,
+        "rows_in": 12115,
+        "rows_written": 5222,
+        "target_rows": 9929
+      },
+      "rejected": 142
+    },
+    {
+      "batch": "orders_2026-01-16.csv",
+      "events_in_batch": 1958,
+      "full_refresh": {
+        "ms": 109.8655000096187,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 26624,
+        "rows_written": 10595,
+        "target_rows": 10595
+      },
+      "incremental_merge": {
+        "ms": 15.885300002992153,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1813,
+        "rows_written": 1494,
+        "target_rows": 10595
+      },
+      "partition_replace": {
+        "ms": 97.84920001402497,
+        "partitions_touched": 8,
+        "rows_deleted": 4548,
+        "rows_in": 12130,
+        "rows_written": 5214,
+        "target_rows": 10595
+      },
+      "rejected": 145
+    },
+    {
+      "batch": "orders_2026-01-17.csv",
+      "events_in_batch": 1929,
+      "full_refresh": {
+        "ms": 117.54949996247888,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 28410,
+        "rows_written": 11253,
+        "target_rows": 11253
+      },
+      "incremental_merge": {
+        "ms": 13.764500035904348,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1786,
+        "rows_written": 1420,
+        "target_rows": 11253
+      },
+      "partition_replace": {
+        "ms": 117.92759993113577,
+        "partitions_touched": 9,
+        "rows_deleted": 5214,
+        "rows_in": 13916,
+        "rows_written": 5872,
+        "target_rows": 11253
+      },
+      "rejected": 143
+    },
+    {
+      "batch": "orders_2026-01-18.csv",
+      "events_in_batch": 1909,
+      "full_refresh": {
+        "ms": 123.53970005642623,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 30178,
+        "rows_written": 11904,
+        "target_rows": 11904
+      },
+      "incremental_merge": {
+        "ms": 12.780699995346367,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1768,
+        "rows_written": 1438,
+        "target_rows": 11904
+      },
+      "partition_replace": {
+        "ms": 108.37669996544719,
+        "partitions_touched": 9,
+        "rows_deleted": 5209,
+        "rows_in": 13916,
+        "rows_written": 5860,
+        "target_rows": 11904
+      },
+      "rejected": 141
+    },
+    {
+      "batch": "orders_2026-01-19.csv",
+      "events_in_batch": 1936,
+      "full_refresh": {
+        "ms": 135.2698999689892,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 31970,
+        "rows_written": 12601,
+        "target_rows": 12601
+      },
+      "incremental_merge": {
+        "ms": 13.234499958343804,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1792,
+        "rows_written": 1452,
+        "target_rows": 12601
+      },
+      "partition_replace": {
+        "ms": 100.8532999549061,
+        "partitions_touched": 8,
+        "rows_deleted": 4512,
+        "rows_in": 12057,
+        "rows_written": 5209,
+        "target_rows": 12601
+      },
+      "rejected": 144
+    },
+    {
+      "batch": "orders_2026-01-20.csv",
+      "events_in_batch": 1998,
+      "full_refresh": {
+        "ms": 140.38300001993775,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 33820,
+        "rows_written": 13271,
+        "target_rows": 13271
+      },
+      "incremental_merge": {
+        "ms": 13.588699977844954,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1850,
+        "rows_written": 1504,
+        "target_rows": 13271
+      },
+      "partition_replace": {
+        "ms": 104.65219989418983,
+        "partitions_touched": 7,
+        "rows_deleted": 3923,
+        "rows_in": 10461,
+        "rows_written": 4593,
+        "target_rows": 13271
+      },
+      "rejected": 148
+    },
+    {
+      "batch": "orders_2026-01-21.csv",
+      "events_in_batch": 1918,
+      "full_refresh": {
+        "ms": 154.00870004668832,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 35596,
+        "rows_written": 13926,
+        "target_rows": 13926
+      },
+      "incremental_merge": {
+        "ms": 52.99499991815537,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1776,
+        "rows_written": 1445,
+        "target_rows": 13926
+      },
+      "partition_replace": {
+        "ms": 89.27880006376654,
+        "partitions_touched": 8,
+        "rows_deleted": 4593,
+        "rows_in": 12237,
+        "rows_written": 5248,
+        "target_rows": 13926
+      },
+      "rejected": 142
+    },
+    {
+      "batch": "orders_2026-01-22.csv",
+      "events_in_batch": 2001,
+      "full_refresh": {
+        "ms": 169.53079996164888,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 37448,
+        "rows_written": 14636,
+        "target_rows": 14636
+      },
+      "incremental_merge": {
+        "ms": 53.034699987620115,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1852,
+        "rows_written": 1469,
+        "target_rows": 14636
+      },
+      "partition_replace": {
+        "ms": 84.14289995562285,
+        "partitions_touched": 8,
+        "rows_deleted": 4565,
+        "rows_in": 12258,
+        "rows_written": 5275,
+        "target_rows": 14636
+      },
+      "rejected": 149
+    },
+    {
+      "batch": "orders_2026-01-23.csv",
+      "events_in_batch": 2014,
+      "full_refresh": {
+        "ms": 166.1277998937294,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 39313,
+        "rows_written": 15264,
+        "target_rows": 15264
+      },
+      "incremental_merge": {
+        "ms": 76.56969991512597,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1865,
+        "rows_written": 1489,
+        "target_rows": 15264
+      },
+      "partition_replace": {
+        "ms": 128.03749996237457,
+        "partitions_touched": 9,
+        "rows_deleted": 5275,
+        "rows_in": 14123,
+        "rows_written": 5903,
+        "target_rows": 15264
+      },
+      "rejected": 149
+    },
+    {
+      "batch": "orders_2026-01-24.csv",
+      "events_in_batch": 1880,
+      "full_refresh": {
+        "ms": 227.6083999313414,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 41054,
+        "rows_written": 15907,
+        "target_rows": 15907
+      },
+      "incremental_merge": {
+        "ms": 16.526399995200336,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1741,
+        "rows_written": 1423,
+        "target_rows": 15907
+      },
+      "partition_replace": {
+        "ms": 97.94280002824962,
+        "partitions_touched": 8,
+        "rows_deleted": 4555,
+        "rows_in": 12213,
+        "rows_written": 5198,
+        "target_rows": 15907
+      },
+      "rejected": 139
+    },
+    {
+      "batch": "orders_2026-01-25.csv",
+      "events_in_batch": 1813,
+      "full_refresh": {
+        "ms": 166.83080000802875,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 42733,
+        "rows_written": 16534,
+        "target_rows": 16534
+      },
+      "incremental_merge": {
+        "ms": 60.35009992774576,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1679,
+        "rows_written": 1341,
+        "target_rows": 16534
+      },
+      "partition_replace": {
+        "ms": 102.1271999925375,
+        "partitions_touched": 9,
+        "rows_deleted": 5228,
+        "rows_in": 13976,
+        "rows_written": 5855,
+        "target_rows": 16534
+      },
+      "rejected": 134
+    },
+    {
+      "batch": "orders_2026-01-26.csv",
+      "events_in_batch": 1945,
+      "full_refresh": {
+        "ms": 185.3576999856159,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 44534,
+        "rows_written": 17224,
+        "target_rows": 17224
+      },
+      "incremental_merge": {
+        "ms": 50.52980000618845,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1801,
+        "rows_written": 1452,
+        "target_rows": 17224
+      },
+      "partition_replace": {
+        "ms": 102.26730001159012,
+        "partitions_touched": 8,
+        "rows_deleted": 4529,
+        "rows_in": 12184,
+        "rows_written": 5219,
+        "target_rows": 17224
+      },
+      "rejected": 144
+    },
+    {
+      "batch": "orders_2026-01-27.csv",
+      "events_in_batch": 1954,
+      "full_refresh": {
+        "ms": 239.4827000098303,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 46344,
+        "rows_written": 17896,
+        "target_rows": 17896
+      },
+      "incremental_merge": {
+        "ms": 57.18150001484901,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1810,
+        "rows_written": 1448,
+        "target_rows": 17896
+      },
+      "partition_replace": {
+        "ms": 104.42270000930876,
+        "partitions_touched": 8,
+        "rows_deleted": 4483,
+        "rows_in": 12008,
+        "rows_written": 5155,
+        "target_rows": 17896
+      },
+      "rejected": 144
+    },
+    {
+      "batch": "orders_2026-01-28.csv",
+      "events_in_batch": 1977,
+      "full_refresh": {
+        "ms": 194.22389997635037,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 48174,
+        "rows_written": 18549,
+        "target_rows": 18549
+      },
+      "incremental_merge": {
+        "ms": 17.62980001512915,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1830,
+        "rows_written": 1455,
+        "target_rows": 18549
+      },
+      "partition_replace": {
+        "ms": 114.38250006176531,
+        "partitions_touched": 8,
+        "rows_deleted": 4500,
+        "rows_in": 12076,
+        "rows_written": 5153,
+        "target_rows": 18549
+      },
+      "rejected": 147
+    },
+    {
+      "batch": "orders_2026-01-29.csv",
+      "events_in_batch": 1867,
+      "full_refresh": {
+        "ms": 247.05670005641878,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 49903,
+        "rows_written": 19183,
+        "target_rows": 19183
+      },
+      "incremental_merge": {
+        "ms": 16.205499996431172,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1729,
+        "rows_written": 1408,
+        "target_rows": 19183
+      },
+      "partition_replace": {
+        "ms": 123.05699998978525,
+        "partitions_touched": 8,
+        "rows_deleted": 4514,
+        "rows_in": 12067,
+        "rows_written": 5148,
+        "target_rows": 19183
+      },
+      "rejected": 138
+    },
+    {
+      "batch": "orders_2026-01-30.csv",
+      "events_in_batch": 1925,
+      "full_refresh": {
+        "ms": 244.4839000236243,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 51686,
+        "rows_written": 19881,
+        "target_rows": 19881
+      },
+      "incremental_merge": {
+        "ms": 14.728400041349232,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1783,
+        "rows_written": 1419,
+        "target_rows": 19881
+      },
+      "partition_replace": {
+        "ms": 105.8024000376463,
+        "partitions_touched": 8,
+        "rows_deleted": 4450,
+        "rows_in": 11964,
+        "rows_written": 5148,
+        "target_rows": 19881
+      },
+      "rejected": 142
+    },
+    {
+      "batch": "orders_2026-01-31.csv",
+      "events_in_batch": 1174,
+      "full_refresh": {
+        "ms": 250.11250004172325,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 52773,
+        "rows_written": 19970,
+        "target_rows": 19970
+      },
+      "incremental_merge": {
+        "ms": 10.406199959106743,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1087,
+        "rows_written": 893,
+        "target_rows": 19970
+      },
+      "partition_replace": {
+        "ms": 102.27299993857741,
+        "partitions_touched": 7,
+        "rows_deleted": 4515,
+        "rows_in": 11338,
+        "rows_written": 4604,
+        "target_rows": 19970
+      },
+      "rejected": 87
+    },
+    {
+      "batch": "orders_2026-02-01.csv",
+      "events_in_batch": 744,
+      "full_refresh": {
+        "ms": 250.22749998606741,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 53462,
+        "rows_written": 19999,
+        "target_rows": 19999
+      },
+      "incremental_merge": {
+        "ms": 7.653100066818297,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 689,
+        "rows_written": 516,
+        "target_rows": 19999
+      },
+      "partition_replace": {
+        "ms": 54.245300008915365,
+        "partitions_touched": 5,
+        "rows_deleted": 3333,
+        "rows_in": 8583,
+        "rows_written": 3362,
+        "target_rows": 19999
+      },
+      "rejected": 55
+    },
+    {
+      "batch": "orders_2026-02-02.csv",
+      "events_in_batch": 319,
+      "full_refresh": {
+        "ms": 308.77589993178844,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 53757,
+        "rows_written": 20000,
+        "target_rows": 20000
+      },
+      "incremental_merge": {
+        "ms": 4.392700036987662,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 295,
+        "rows_written": 213,
+        "target_rows": 20000
+      },
+      "partition_replace": {
+        "ms": 87.80169999226928,
+        "partitions_touched": 5,
+        "rows_deleted": 3362,
+        "rows_in": 8878,
+        "rows_written": 3363,
+        "target_rows": 20000
+      },
+      "rejected": 24
+    },
+    {
+      "batch": "orders_2026-02-03.csv",
+      "events_in_batch": 109,
+      "full_refresh": {
+        "ms": 256.80479989387095,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 53858,
+        "rows_written": 20000,
+        "target_rows": 20000
+      },
+      "incremental_merge": {
+        "ms": 2.7646999806165695,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 101,
+        "rows_written": 72,
+        "target_rows": 20000
+      },
+      "partition_replace": {
+        "ms": 44.72200002055615,
+        "partitions_touched": 4,
+        "rows_deleted": 2668,
+        "rows_in": 7109,
+        "rows_written": 2668,
+        "target_rows": 20000
+      },
+      "rejected": 8
+    },
+    {
+      "batch": "orders_2026-02-04.csv",
+      "events_in_batch": 49,
+      "full_refresh": {
+        "ms": 275.13270010240376,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 53904,
+        "rows_written": 20000,
+        "target_rows": 20000
+      },
+      "incremental_merge": {
+        "ms": 2.104399958625436,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 46,
+        "rows_written": 37,
+        "target_rows": 20000
+      },
+      "partition_replace": {
+        "ms": 35.32620007172227,
+        "partitions_touched": 3,
+        "rows_deleted": 1986,
+        "rows_in": 5322,
+        "rows_written": 1986,
+        "target_rows": 20000
+      },
+      "rejected": 3
+    },
+    {
+      "batch": "orders_2026-02-05.csv",
+      "events_in_batch": 8,
+      "full_refresh": {
+        "ms": 285.3451000992209,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 53910,
+        "rows_written": 20000,
+        "target_rows": 20000
+      },
+      "incremental_merge": {
+        "ms": 0.4618000239133835,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 6,
+        "rows_written": 6,
+        "target_rows": 20000
+      },
+      "partition_replace": {
+        "ms": 23.01100001204759,
+        "partitions_touched": 2,
+        "rows_deleted": 1348,
+        "rows_in": 3596,
+        "rows_written": 1348,
+        "target_rows": 20000
+      },
+      "rejected": 2
+    },
+    {
+      "batch": "orders_2026-02-06.csv",
+      "events_in_batch": 3,
+      "full_refresh": {
+        "ms": 288.56800007633865,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 53911,
+        "rows_written": 20000,
+        "target_rows": 20000
+      },
+      "incremental_merge": {
+        "ms": 0.3722000401467085,
+        "partitions_touched": null,
+        "rows_deleted": 0,
+        "rows_in": 1,
+        "rows_written": 1,
+        "target_rows": 20000
+      },
+      "partition_replace": {
+        "ms": 12.476200005039573,
+        "partitions_touched": 1,
+        "rows_deleted": 704,
+        "rows_in": 1885,
+        "rows_written": 704,
+        "target_rows": 20000
+      },
+      "rejected": 2
+    }
+  ],
+  "reconciliation_passed": true,
+  "strategies": {
+    "full_refresh": {
+      "last_batch_ms": 288.56800007633865,
+      "max_ms": 308.77589993178844,
+      "mean_ms": 147.43803513261514,
+      "median_ms": 135.2698999689892,
+      "rows_deleted_total": 0,
+      "rows_read_total": 1148692,
+      "rows_written_total": 447428,
+      "total_s": 5.4552072999067605
+    },
+    "incremental_merge": {
+      "last_batch_ms": 0.3722000401467085,
+      "max_ms": 76.56969991512597,
+      "mean_ms": 19.08264054627334,
+      "median_ms": 13.314799987711012,
+      "rows_deleted_total": 0,
+      "rows_read_total": 53911,
+      "rows_written_total": 43504,
+      "total_s": 0.7060577002121136
+    },
+    "partition_replace": {
+      "last_batch_ms": 12.476200005039573,
+      "max_ms": 128.03749996237457,
+      "mean_ms": 76.75958107653501,
+      "median_ms": 89.27880006376654,
+      "rows_deleted_total": 137500,
+      "rows_read_total": 367187,
+      "rows_written_total": 157500,
+      "total_s": 2.8401044998317957
+    }
+  },
+  "target_rows_final": 20000
+}

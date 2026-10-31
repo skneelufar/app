@@ -1,0 +1,4 @@
+order_id,customer_id,order_ts,status,amount,currency,updated_at
+ord_0000178,cust_00015,2026-01-05T07:57:07Z,shipped,167.17,INR,2026-01-08T07:08:07Z
+,cust_00014,2026-01-11T12:00:00Z,created,10.00,USD,2026-01-11T12:00:00Z
+ord_0000178,cust_00015,2026-01-05T07:57:07Z,shipped,167.17,INR,2026-01-08T07:08:07Z

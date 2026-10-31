@@ -1,0 +1,3 @@
+# Runtime: Python standard library only (needs sqlite3 >= 3.25 for window functions and UPSERT).
+# Optional, for running the tests with pytest (they are plain unittest and also run without it):
+pytest>=7.0

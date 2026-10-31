@@ -1,0 +1,46 @@
+test_cli_demo_runs_clean ... {
+test_generated_rejects_match_answer_key_and_strategies_reconcile ... ok
+test_reconcile_detects_orphan_reference ... ok
+test_reconcile_detects_tampering ... ok
+test_ten_runs_of_the_same_inputs_converge ... ok
+test_labels_are_separate_from_inputs ... ok
+test_same_seed_same_bytes_different_seed_differs ... ok
+test_duplicate_rows_same_file_and_across_files ... ok
+test_edge_case_files_do_not_crash_the_pipeline ... 2026-10-30 10:44:21,325 ERROR run_id=ingest-20261030T104421-3e5a755a stage=ingest strategy=None source_file=edge_03_missing_currency_column.csv status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.1 error=SchemaError: missing required columns ['currency']; header was ['order_id', 'customer_id', 'order_ts', 'status', 'amount', 'updated_at']
+test_empty_batch_header_only ... ok
+test_happy_path ... ok
+test_invalid_reference_key ... ok
+test_load_customers_is_idempotent ... ok
+test_malformed_and_missing_fields_are_quarantined_with_line_numbers ... ok
+test_non_utf8_file_fails_cleanly ... 2026-10-30 10:44:21,364 ERROR run_id=ingest-20261030T104421-365bc557 stage=ingest strategy=None source_file=binary.csv status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.1 error=UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 64: invalid start byte
+test_nulls_and_blank_lines ... ok
+test_order_ts_is_immutable ... ok
+test_partial_failure_rolls_back_and_retry_succeeds_without_duplicates ... 2026-10-30 10:44:21,381 ERROR run_id=ingest-20261030T104421-492fea13 stage=ingest strategy=None source_file=a.csv status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.4 error=InjectedFailure: injected failure after 4 accepted rows
+test_rerun_of_same_file_is_noop ... ok
+test_same_content_renamed_file_creates_no_duplicates ... ok
+test_schema_change_extra_and_reordered_columns_tolerated ... ok
+test_schema_change_missing_column_fails_file_and_lands_nothing ... 2026-10-30 10:44:21,405 ERROR run_id=ingest-20261030T104421-52478a57 stage=ingest strategy=None source_file=bad_schema.csv status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.2 error=SchemaError: missing required columns ['currency']; header was ['order_id', 'customer_id', 'order_ts', 'status', 'amount', 'updated_at']
+test_zero_byte_file_is_empty_batch ... ok
+test_backfill_by_resetting_watermark_converges_without_duplicates ... ok
+test_empty_input_is_a_safe_noop ... ok
+test_explicit_partition_backfill_repairs_a_corrupted_partition ... ok
+test_failed_run_is_recorded_with_reason ... 2026-10-30 10:44:21,445 ERROR run_id=publish-20261030T104421-28f60da2 stage=publish strategy=incremental_merge source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.3 error=InjectedFailure: injected failure after unit 1 (before_commit)
+test_full_refresh_failure_leaves_previous_target_intact_then_retry_works ... 2026-10-30 10:44:21,454 ERROR run_id=publish-20261030T104421-8c421e4f stage=publish strategy=full_refresh source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.5 error=InjectedFailure: injected failure after unit 1 (before_swap)
+test_happy_path_all_strategies_equal ... ok
+test_incremental_failure_rolls_back_data_and_watermark_together ... 2026-10-30 10:44:21,469 ERROR run_id=publish-20261030T104421-e22c78eb stage=publish strategy=incremental_merge source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.1 error=InjectedFailure: injected failure after unit 1 (before_commit)
+test_incremental_updates_only_changed_and_late_new_partition ... ok
+test_late_arriving_older_event_never_overwrites_newer_state ... ok
+test_out_of_order_events_inside_one_batch ... ok
+test_partition_replace_atomic_mode_is_all_or_nothing ... 2026-10-30 10:44:21,501 ERROR run_id=publish-20261030T104421-8f7040e5 stage=publish strategy=partition_replace source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.2 error=InjectedFailure: injected failure after unit 1 (partition 2026-01-01)
+test_partition_replace_only_touches_affected_partitions ... ok
+test_partition_replace_partial_failure_is_resumable ... 2026-10-30 10:44:21,512 ERROR run_id=publish-20261030T104421-fcedc36f stage=publish strategy=partition_replace source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.4 error=InjectedFailure: injected failure after unit 2 (partition 2026-01-02)
+test_rerun_same_input_is_idempotent ... ok
+test_tie_on_updated_at_is_resolved_deterministically ... ok
+test_unknown_strategy ... ok
+test_amount_boundaries ... ok
+test_event_id_is_deterministic ... ok
+test_reject_reasons ... ok
+test_timestamps_normalized_to_utc ... ok
+test_valid_row_is_normalized ... ok
+Ran 44 tests in 0.661s
+OK

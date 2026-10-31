@@ -1,0 +1,4 @@
+order_id,customer_id,order_ts,status,amount,currency,updated_at
+ord_0000134,cust_00015,2026-01-02T00:08:38Z,paid,10.00,USD,2026-01-02T00:09:38Z
+ord_0000112,cust_00019,2026-01-04T13:10:28Z,refunded,62.75,INR,2026-01-07T05:22:28Z
+ord_0000112,cust_00019,2026-01-04T13:10:28Z,refunded,62.75,INR,2026-01-07T05:22:28Z
