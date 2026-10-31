@@ -1,0 +1,14 @@
+{
+  "batch_files": 11,
+  "customers": 20,
+  "days": 5,
+  "labelled_rejects": 50,
+  "orders": 200,
+  "rows": {
+    "duplicate": 19,
+    "invalid": 31,
+    "valid": 541
+  },
+  "seed": 42,
+  "valid_events": 541
+}

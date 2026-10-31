@@ -1,0 +1,2 @@
+order_id,customer_id,order_ts,status,amount,currency,updated_at,channel
+edge_000001,cust_00000,2026-01-02T10:00:00Z,created,19.99,USD,2026-01-02T10:00:00Z,web

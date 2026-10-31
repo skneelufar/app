@@ -1,0 +1,78 @@
+== 1. load customers, ingest first two daily batches, publish all strategies
+  "rows_out": 20,
+  "status": "SUCCESS"
+    "rows_in": 45,
+    "rows_out": 42,
+    "rows_rejected": 3,
+    "status": "SUCCESS",
+    "rows_in": 80,
+    "rows_out": 74,
+    "rows_rejected": 6,
+    "status": "SUCCESS",
+
+== 2. edge-case files (empty, zero-byte, missing column, extra column, malformed)
+2026-10-30 10:44:13,896 ERROR run_id=ingest-20261030T104413-e4240e4b stage=ingest strategy=None source_file=edge_03_missing_currency_column.csv status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=0.1 error=SchemaError: missing required columns ['currency']; header was ['order_id', 'customer_id', 'order_ts', 'status', 'amount', 'updated_at']
+    "error": null,
+    "rows_out": 0,
+    "rows_rejected": 0,
+    "source_file": "edge_01_header_only.csv",
+    "status": "SUCCESS",
+    "error": null,
+    "rows_out": 0,
+    "rows_rejected": 0,
+    "source_file": "edge_02_zero_bytes.csv",
+    "status": "SUCCESS",
+    "error": "SchemaError: missing required columns ['currency']; header was ['order_id', 'customer_id', 'order_ts', 'status', 'amount', 'updated_at']",
+    "rows_out": 0,
+    "rows_rejected": 0,
+    "source_file": "edge_03_missing_currency_column.csv",
+    "status": "FAILED",
+    "error": null,
+    "rows_out": 1,
+    "rows_rejected": 0,
+    "source_file": "edge_04_extra_column.csv",
+    "status": "SUCCESS",
+    "error": null,
+    "rows_out": 0,
+    "rows_rejected": 2,
+    "source_file": "edge_05_all_malformed.csv",
+    "status": "SUCCESS",
+(the schema-change file FAILED as a whole and landed nothing; every other file was unaffected)
+
+== 3. re-run the same input: ingest is SKIPPED, publish is a no-op (idempotent)
+    "status": "SKIPPED",
+
+== 4. ingest the remaining batches, then crash each strategy mid-publish
+2026-10-30 10:44:14,150 ERROR run_id=publish-20261030T104414-59c5e498 stage=publish strategy=full_refresh source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=3.6 error=InjectedFailure: injected failure after unit 1 (before_swap)
+    "error": "InjectedFailure: injected failure after unit 1 (before_swap)",
+    "status": "FAILED",
+2026-10-30 10:44:14,223 ERROR run_id=publish-20261030T104414-c83f3d63 stage=publish strategy=incremental_merge source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=2.3 error=InjectedFailure: injected failure after unit 1 (before_commit)
+    "error": "InjectedFailure: injected failure after unit 1 (before_commit)",
+    "status": "FAILED",
+2026-10-30 10:44:14,290 ERROR run_id=publish-20261030T104414-c3ca47a1 stage=publish strategy=partition_replace source_file=None status=FAILED rows_in=None rows_out=None rejected=None written=None deleted=None partitions=None duration_ms=2.2 error=InjectedFailure: injected failure after unit 2 (partition 2026-01-02)
+    "error": "InjectedFailure: injected failure after unit 2 (partition 2026-01-02)",
+    "status": "FAILED",
+-- state after crash: full_refresh + incremental_merge are untouched (atomic); partition_replace is
+   partially applied (2 of 3+ partitions already rewritten, watermark not advanced) and reconcile flags it:
+**Overall: FAIL**
+| 5 | full_refresh: equals independent oracle at watermark 117 | PASS | rows=72 expected=72 missing=0 extra=0 mismatched=0 |
+| 8 | incremental_merge: equals independent oracle at watermark 117 | PASS | rows=72 expected=72 missing=0 extra=0 mismatched=0 |
+| 11 | partition_replace: equals independent oracle at watermark 117 | **FAIL** | rows=77 expected=72 missing=0 extra=5 mismatched=51 |
+
+== 5. retry (restart = run the same command again)
+    "status": "SUCCESS",
+    "strategy": "full_refresh",
+    "status": "SUCCESS",
+    "strategy": "incremental_merge",
+    "status": "SUCCESS",
+    "strategy": "partition_replace",
+**Overall: PASS**
+
+== 6. run history (failures are recorded with reasons)
+publish partition_replace FAILED | InjectedFailure: injected failure after unit 2 (partition 2026-01-02)
+publish incremental_merge FAILED | InjectedFailure: injected failure after unit 1 (before_commit)
+publish full_refresh FAILED | InjectedFailure: injected failure after unit 1 (before_swap)
+ingest orders_2026-01-02.csv SKIPPED | 
+ingest orders_2026-01-01.csv SKIPPED | 
+ingest orders_2026-01-01.csv SKIPPED | 
+ingest edge_03_missing_currency_column.csv FAILED | SchemaError: missing required columns ['currency']; header was ['order_id', 'customer_id',
